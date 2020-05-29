@@ -1,98 +1,207 @@
-html {
-    font-family: sans-serif;
-}
 body {
-    background-color: #395B50;
-    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0e4563;
+  }
+
+body, html {
+    padding: 0;
+    margin: 0;
 }
-header {
-    background-color: #013220;
-    position: absolute;
-    left: -20px;
-    top: -10px;
-    padding: 1rem;
-    height: 100%;
-    border-right: gray 0.5rem solid;
-    transform: rotate(2deg);
-}
-header h1, header nav {
-    transform: rotate(-2deg);
-}
-header h1 {
+  
+  .mobile-container {
+    height: auto;
     color: white;
-}
-nav li a{
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #0d1f33;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  #bannertxemlin {
+      display: none;
+  }
+
+  main {
+      text-align:center;
+      padding: 5px;
+  }
+  nav {
+    display: none;
+  }
+  nav li a{
     color: white;
     text-decoration: none;
     font-size: 135%;
-}
-nav li:first-child {
+  }
+  nav li:first-child {
     margin-top: 3rem;
-}
-nav li {
+  }
+  nav li {
     margin-top: 1rem;
-}
-nav ul {
+  }
+  nav ul {
     list-style-type: none;
     margin-left: -1em; 
-}
-nav li a:hover {
+  }
+  nav li a:hover {
     animation-name: moveListItemNav;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+  }
+
+  @media only screen and (min-width: 1100px) {
+    html {
+      font-family: sans-serif;
+  }
+  body {
+      background-color: #0e4563;
+      overflow: hidden;
+  }
+  header {
+      background-color: #0d1f33;
+      position: absolute;
+      left: -20px;
+      top: -10px;
+      padding: 1rem;
+      height: 100%;
+      border-right: skyblue 0.5rem solid;
+      transform: rotate(2deg);
+  }
+  header h1, header nav {
+      transform: rotate(-2deg);
+  }
+  header h1 {
+      color: white;
+  }
+  nav li a{
+      color: white;
+      text-decoration: none;
+      font-size: 135%;
+  }
+  nav li:first-child {
+      margin-top: 3rem;
+  }
+  nav li {
+      margin-top: 1rem;
+  }
+  nav ul {
+      list-style-type: none;
+      margin-left: -1em; 
+  }
+  nav li a:hover {
+      animation-name: moveListItemNav;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+  }
+  main img {
+      position: absolute;
+      top: -5px;
+      right: -19rem;
+      height: 105%;
+      border-left: 0.5rem solid skyblue;
+      float: right;
+      transform: rotate(2deg);
+  }
+  main img:hover {
+      animation-name: moveBannerTxemlin;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+  }
+  main {
+      color:  #fafafa;
+  }
+  #mainContent {
+    height: 40rem;
+    overflow-y: auto;
+  }
+  .current {
+      color: gray;
+  }
+  main h1 {
+      text-align: center;
+      width: 93%;
+      margin-top: 3%;
+      font-size: 220%;
+  }
+  main p {
+      margin-left: 29%;
+      margin-top: 2%;
+      width: 35%;
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 120%;
+  }
+  @keyframes moveListItemNav {
+      from {
+         padding-left: 0em;
+      }
+      to {
+         padding-left: 0.3em;
+      }
+  }
+  @keyframes moveBannerTxemlin {
+      from {
+          right: -19rem;
+          transform: scale(1);
+          transform: rotate(2deg);
+       }
+       to {
+          right: -17rem;
+          transform: rotate(0deg);
+          transform: scale(1.1);
+       }
+  }
+  .topnav {
+    display: none;
+  }
+  nav {
+    display: block;
+    min-width: 12em;
+  }
+  #bannertxemlin {
+    display: block;
+  }
 }
-main img {
-    position: absolute;
-    top: -5px;
-    right: -10rem;
-    height: 105%;
-    border-left: 0.5rem solid gray;
-    float: right;
-    transform: rotate(2deg);
-}
-main img:hover {
-    animation-name: moveBannerTxemlin;
-    animation-duration: 2s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-main {
-    color:  #fafafa;
-}
-.current {
-    color: gray;
-}
-main h1 {
-    text-align: center;
-    width: 93%;
-    margin-top: 3%;
-    font-size: 220%;
-}
-main p {
-    margin-left: 29%;
-    margin-top: 2%;
-    width: 35%;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 120%;
-}
-@keyframes moveListItemNav {
+@media only screen and (min-width: 1200px) {
+  #bannertxemlin {
+    display:block;
+  }
+  main img {
+    right: -17rem;
+  }
+  @keyframes moveBannerTxemlin {
     from {
-       padding-left: 0em;
-    }
-    to {
-       padding-left: 0.3em;
-    }
-}
-@keyframes moveBannerTxemlin {
-    from {
-        right: -10rem;
+        right: -17rem;
         transform: scale(1);
         transform: rotate(2deg);
      }
      to {
-        right: -5rem;
+        right: -16rem;
         transform: rotate(0deg);
         transform: scale(1.1);
      }
+}
 }

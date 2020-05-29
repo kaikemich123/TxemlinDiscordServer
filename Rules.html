@@ -2,10 +2,24 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body>
+    <div class="mobile-container">
 <header>
-<h1>Txemlin's Discord Server</h1>
+    <div class="topnav">
+        <a href='index.html' class='current'>Home</a>
+        <div id="myLinks">
+            <a href='Join.html'>Join Us Now!</a>
+            <a href='Rules.html'>Rules</a>
+            <a href='Report.html'>How To Report</a>
+            <a href='Appeal.html'>Appeal</a>
+        </div>
+        <a href ="javascript:void(0);" class="icon" onclick="triggerMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 <nav>
 <ul>
     <li><a href='index.html'>Home</a></li>
@@ -17,7 +31,8 @@
 </nav>
 </header>
 <main>
-    <h1>Rules</h1>
+    <div id="mainContent">
+    <h1>Txemlin's Adventure: Rules</h1>
     <p>
         1) <b>Disruptive behaviour is not tolerated</b>. This includes (but is not limited to) spam, slurs, hate speech, harassment, insults, witch-hunting, and impersonation. 
         <br>• This rule applies to both <b>text</b> and <b>voice</b> channels. <br><br>
@@ -32,7 +47,19 @@
         7) This is an <b>English/Dutch-speaking server</b>. Users speaking in languages other than English or Dutch, whether in a text or voice channel, will be asked to stop.
 
     </p>
-    <img src="images/BannerTxemlin.jpg">
+    </div>
+    <img src="images/CommunityBot.png" id="bannertxemlin">
 </main>
+</div>
+<script>
+    function triggerMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
